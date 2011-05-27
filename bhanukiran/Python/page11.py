@@ -3,7 +3,7 @@ import pylab as p
 #motion of a particle under the influence of a force F = -kx; k = 1
 
 def shm():
-    n = 100; j = 500
+    n = 1000
     dt = 2*sp.pi/n
 
     X = [0]*n
@@ -14,7 +14,7 @@ def shm():
         V[i+1] = -X[i]*dt + V[i]
         T[i+1] = T[i] + dt
 
-    p.plot(T,X, 'x') + p.plot(T,V, 'o')
+    p.plot(T,X) + p.plot(T,V)
     p.show()
 
 
